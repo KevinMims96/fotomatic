@@ -1,5 +1,9 @@
 /* Universal Styles */
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -232,6 +236,8 @@ header .mobile {
   justify-content: space-between;
   padding: 4rem 5%;
   background-color: #f3f3f3;
+  margin: 0;
+  vertical-align: baseline;
 }
 
 .feature {
@@ -239,12 +245,22 @@ header .mobile {
   padding: 2rem;
   margin: 0px 1.25rem;
   background-color: white;
+  box-sizing: border-box;
+  display: block;
+  width: auto;
+  height: auto;
 }
 
-.feature .image-container {
+#features-section .image-container {
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 40px;
+}
+
+#features-section .image-container img {
+  margin: 0 auto;
   width: 90%;
   height: 65%;
-  margin: 0 auto;
 }
 
 .feature h2 {
@@ -291,6 +307,7 @@ header .mobile {
 #filters-section {
   padding: 4rem 0;
   background-color: #4a4a4a;
+  display: block;
 }
 
 #filters-section .content {
@@ -313,7 +330,18 @@ header .mobile {
 
 #filters-section .images-container {
   max-width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
   padding: 0 1%;
+}
+
+#filters-section .image-container {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#filters-section .image-container img {
+  width: 100%;
 }
 
 @media only screen and (max-width: 760px) {
@@ -337,10 +365,6 @@ header .mobile {
     line-height: 1.4;
   }
 
-  #filters-section .images-container {
-    padding: 0;
-  }
-
   #filters-section .extra {
     display: none;
   }
@@ -352,12 +376,12 @@ header .mobile {
   background-color: #f3f3f3;
 }
 
-#quotes-section content {
+#quotes-section .content {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
-  padding-right: 1.875rem;
+#quotes-section .quote {
+  padding-right: 30px;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
   line-height: 1.1;
@@ -365,7 +389,7 @@ header .mobile {
   color: #4a4a4a;
 }
 
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
 }
 
@@ -374,12 +398,12 @@ header .mobile {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
     margin: auto;
@@ -391,12 +415,13 @@ header .mobile {
 footer {
   background-color: #9b9b9b;
   padding: 1.5rem 2rem;
+  font-family: "Roboto-regular", sans-serif;
+  font-size: 16px;
 }
 
 footer .content {
   color: white;
   display: flex;
-  font-size: .75rem;
 }
 
 footer .copyright {
